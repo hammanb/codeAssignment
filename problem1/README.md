@@ -40,7 +40,9 @@ Extra Credit
     If you want to test the output result, choose a different starting room from the same grid and run the operation to verify the result.
     If you want to test scalability, run the script against a chosen grid size of the maximum expected grid.
 
-/* ====Pseudo code===== */
+```
+
+/* ====Pseudo code=====
 get <starting room>
 
 create <grid row>
@@ -60,3 +62,5 @@ create <grid column>
     if can't move <direction>, break
 
 output: count of <grid row> * count of <grid column>
+/*
+```
