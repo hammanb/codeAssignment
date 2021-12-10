@@ -1,4 +1,3 @@
-/*
 Problem 1: 
 Setup 
   A robot that has been dropped into a square 9x9 grid of square rooms. Walls between rooms have doors in them, but walls on the edge do not. All of the doors are closed initially. 
@@ -34,10 +33,8 @@ Extra Credit
     If you want to test units of the code, you could break down specific operations from the script.
     If you want to test the output result, choose a different starting room from the same grid and run the operation to verify the result.
     If you want to test scalability, run the script against a chosen grid size of the maximum expected grid.
-*/
 
 /* ====Pseudo code===== */
-/*
 get <starting room>
 
 create <grid row>
@@ -57,4 +54,3 @@ create <grid column>
     if can't move <direction>, break
 
 output: count of <grid row> * count of <grid column>
-*/
