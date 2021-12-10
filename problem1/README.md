@@ -21,14 +21,14 @@ Extra Credit
   4. How much data did you save from each move? Can you save less data? 
 > Assuming the starting grid is only a square or rectangle, the minimum necessary data saved to the data structure in my pseudocode below would only be a record of it's presence. If minimum storage was the goal, you could also just increase a count as you move rooms, to store a single "count" variable. 
 
-> However, each loop of the recursive method would need to gather the door information into call stack memory, and the recursive stack memory will increase with each loop. This approach would have minimum storage in a data structure, but call stack memory will hit a limit eventually. If call stack memory is limited, you would need to store each movement in the database with all the rooms parameters, and refactor the below pseudocode to operate asynchronously with callbacks to populate the row and column data structures.
+> However, each loop of the recursive method would need to gather the door information into call stack memory, and the recursive stack memory will increase with each loop. This approach would have minimum storage in a data structure, but call stack memory will hit a limit eventually as the grid size grows. If call stack memory is limited, you would need to store each movement in the database with all the rooms parameters, and likely need to build relationships to avoid duplicate entries, and then refactor the below pseudocode to operate asynchronously.
     
   5. 2 arbitrarily selected rooms in the grid are removed (count as zero, no doors lead to these areas). Will this change your approach? How does this affect the number of moves required? 
 > Yes, the approach would be different if there were an infinite number of room orientations. 
 
-> One approach would be to call the recursive function, and start a new "branch" of recursion for each possible path you could take. A check would need to be in place at the beginning of each loop for the room's unid if it is already in the database to prevent an infinite recursive loop. 
+> One approach would be to call the recursive function, and start a new "branch" of recursion for each possible path you could take. A check would need to be in place at the beginning of each loop for the room's unid if it is already in the database to prevent an infinite recursive loop. this would be fine with small grids.
 
-> Again, if call stack size is a concern, then you would need to refactor the script to operate asynchronously, and would need to store relationships between rooms in the data structure for each of your movements, so you dont end up duplicating objects in the database.
+> But again, if expected grid size keeps expanding and call stack memory becomes a concern, then you could take this "branching" approach, but would need to refactor the script to operate asynchronously and store more data to the data structure.
   
   6. What tests would you write for your robot? 
 > Depends on what you are testing: 
