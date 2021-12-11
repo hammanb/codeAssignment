@@ -12,6 +12,9 @@ You can write your answers with words, flowcharts or pseudocode.
 ```
 
 /* ====Pseudo code=====
+
+This is a "discovery" problem, and can be approached by gathering room details, and storing the details of the room.
+
 get <starting room>
 
 create <grid row>
