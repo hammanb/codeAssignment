@@ -44,7 +44,7 @@ output: count of <grid row> * count of <grid column>
 > Yes, assuming the grid is always a square or rectangle, adding up all rooms in row and column, and multiplying them would work.
       
   3. How many moves does it take to complete the count? Can you find the answer in less moves? 
-> The approach I took starts in a direction from starting room, and then goes in the other direction from starting room. This would mean the total amount of moves for this approach would be (row length - 1) * (column length - 1). 
+> The approach I took starts in a direction from starting room, and then goes in the other direction from starting room. This would mean the total amount of moves for this approach would be (row length - 1) + (column length - 1). 
       
 Extra Credit 
   4. How much data did you save from each move? Can you save less data? 
