@@ -13,7 +13,7 @@ async function main() {
 
   /* 1. Find all Classes that Student Matilda is enrolled in and list their Score for each. The Score for each Class is defined as Credits x Points. Print this result to the console. */
 
-  asyncScores().then(function(result) {
+  asyncStudents().then(function(result) {
     console.log('Question 1:');
     console.log("Matilda's scores:");
     let student = result.find((e) => { return e._id.equals(matilda._id) });
@@ -47,12 +47,12 @@ async function main() {
     })
   }
   
-  async function asyncScores () {
-    return await getScoresPromise()
+  async function asyncStudents () {
+    return await getStudentsPromise()
   }
 
   //Get Data function
-  function getScoresPromise () {
+  function getStudentsPromise () {
     return new Promise((resolve, reject) => {
       Student.aggregate([
         //{ $match: { _studentID: student} },
