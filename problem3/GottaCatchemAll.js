@@ -15,7 +15,8 @@ class Parent extends GrandParent {
 
     try {
       if (badsad) {
-        //the promise needs to be returned within this try/catch for the catch to fire the error.
+        //if the idea is to keep the grandparent async, then parent also needs to be async, and the async grandparent needs to be called with await. 
+        //I am not entirely comfortable with my understanding of async / await with inheritance, and having trouble finding a docs that confirm my understanding in this case. 
         await this.kaboom()
       }
     } catch(err) {
