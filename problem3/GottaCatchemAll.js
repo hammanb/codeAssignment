@@ -16,7 +16,6 @@ class Parent extends GrandParent {
     try {
       if (badsad) {
         //the promise needs to be returned within this try/catch for the catch to fire the error.
-        //would love feedback if this wasn't correct.
         await this.kaboom()
       }
     } catch(err) {
