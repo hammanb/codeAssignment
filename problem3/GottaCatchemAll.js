@@ -16,6 +16,7 @@ class Parent extends GrandParent {
     try {
       if (badsad) {
         //if the idea is to keep the grandparent async, then parent also needs to be async, and the async grandparent needs to be called with await. 
+        //child is not expecting anything returned, and neither is the initial call at line 35, so no promise needs to be created. 
         //I am not entirely comfortable with my understanding of async / await with inheritance, and having trouble finding a docs that confirm my understanding in this case. 
         await this.kaboom()
       }
